@@ -34,7 +34,6 @@ function App() {
                 Plants
               </NavLink>
             </li>
-            <h1>Hello</h1>
             <li>
               <NavLink to="/cart">
                 Cart

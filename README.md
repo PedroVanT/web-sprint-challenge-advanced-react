@@ -30,13 +30,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain how to build stateful class components.
 
+You declare your class for the Component, then you build out your constructor by passing in whatever you like into the state. After that, you call you call to render. Any time you update the state, your render should be called again to update.
+
 2. Describe the different phases of the component lifecycle.
+
+The phases of the react component lifecycle are mounting, updating, and unmounting. Mounting is invoked after React inserts the component into the DOM. It is used to set a component's state post-render. Updating takes arguments prevProps and prevState and is called immediately after render is finished in each re-render cycle. It is used for side efects and should always be used with an if statement to ensure that the relavent state and props have actually changed before enacting. Unmount is the cleanup, removing any event listeners, invalidating timers or cleaning up and DOM elements that were created in the previous lifecycle methods. This prevents infinite loops
 
 3. Demonstrate an understanding of class component lifecycle methods.
 
+Other than what was described in the prior answer, if you use function components, you can use useEffect and all of the other component lifecycle methods are implied, like updating and unmounting are implied withing the code inside of useEffect and are called whenever a re-render takes place. The variables that are cleaned up inside the unmounting process are stated in the brakets in the end of useEffect.
+
 4. Define stateful logic.
 
+Stateful logic is logic that is built into a component. React is unique because in dealing with state, we don't replace the old state value with the new state value. Instead we create the new state value and move the pointer
+
 5. Describe how to test a React component with React Testing Library.
+
+You can write a test to test the render, you can test the form, you can test button clicks. It is not E2E testing unless you make it so. It is a lightweight test that is an a la cart approach to testing.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
